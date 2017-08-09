@@ -1,0 +1,16 @@
+footer {
+  background-color: $white;
+
+  .explore {
+    display: flex;
+
+    &__item {
+      flex: 1 1 50%;
+
+      a {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}

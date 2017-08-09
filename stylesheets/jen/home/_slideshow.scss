@@ -1,0 +1,5 @@
+.home {
+  .slideshow-container {
+    @include grid-column(8, $jl-mobile-grid);
+  }
+}

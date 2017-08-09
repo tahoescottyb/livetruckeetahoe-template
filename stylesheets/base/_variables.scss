@@ -1,6 +1,15 @@
 // Breakpoints
-$medium-screen: 600px;
-$large-screen: 900px;
+// neat defaults
+$media-mobile: 300px;
+$media-tablet: 768px;
+$media-desktop: 1100px;
+$media-desktop-large: 1300px;
+
+$columns: 12;
+$gutter: 20px;
+$grid--rtl: (
+  direction: rtl
+);
 
 // Typography
 $base-font-family: $font-stack-system;
@@ -24,6 +33,7 @@ $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$white: #fff;
 
 // Font Colors
 $base-font-color: $dark-gray;

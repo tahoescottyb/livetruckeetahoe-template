@@ -1,0 +1,25 @@
+.home {
+  .full-container {
+    .grid__column--8-of-12 {
+      @include grid-push(2);
+    }
+
+    .grid__column--4-of-12 {
+      @include grid-push(4);
+    }
+
+    &__content {
+      &--item {}
+    }
+  }
+
+  .half-container {
+    .grid__column--6-of-12 {
+      @include grid-push(3);
+    }
+
+    &__content {
+      &--item {}
+    }
+  }
+}

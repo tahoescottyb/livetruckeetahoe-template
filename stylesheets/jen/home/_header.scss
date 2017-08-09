@@ -1,0 +1,39 @@
+.home {
+  .banner-container {
+    color: $white;
+    background-image: url('../images/lake-tahoe-2-1200x675.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+
+    @include grid-media($jl-tablet-grid) {
+      height: 30rem;
+    }
+
+    &__search {
+      &--content {
+        @include grid-column(8, $jl-mobile-grid);
+
+        @include grid-media($jl-tablet-grid) {
+          @include grid-column(6);
+          @include grid-push(3);
+        }
+      }
+
+      /*
+      input {
+        float: left;
+      }
+
+      input[type=text] {
+        width: 70%;
+      }
+
+      input[type=submit] {
+        width: 30%;
+      }
+      */
+    }
+  }
+}

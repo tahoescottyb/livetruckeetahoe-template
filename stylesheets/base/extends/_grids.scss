@@ -1,0 +1,25 @@
+// Should just be for reference due to mobile-first
+$jl-mobile-grid: (
+  columns: 8,
+  gutter: .5rem,
+  media: "(max-width: " + $media-tablet + ")"
+);
+
+$jl-tablet-grid: (
+  columns: $columns,
+  gutter: $gutter,
+  media: $media-tablet
+);
+
+$jl-desktop-grid: (
+  columns: $columns,
+  gutter: $gutter,
+  media: $media-desktop
+);
+
+$jl-large-grid: (
+  columns: $columns,
+  gutter: $gutter,
+  media: $media-desktop-large
+);
+

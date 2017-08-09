@@ -1,0 +1,19 @@
+.home {
+  .location-container {
+    @include grid-column(8, $jl-mobile-grid);
+
+    &__hero {
+      padding: 1rem;
+      background-color: $light-gray;
+    }
+
+    &__locations {
+      display: flex;
+
+      &--item {
+        flex: 1 1 33%;
+        background-color: red;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.banner-container {
+  &__nav {
+    padding-top: 1rem;
+
+    &-logo {
+      @include grid-column(3, $jl-mobile-grid);
+
+      @include grid-media($jl-tablet-grid) {
+        @include grid-column(2)
+      }
+
+      img {}
+    }
+
+    &-menu {
+      @include grid-column(5, $jl-mobile-grid);
+
+      @include grid-media($jl-tablet-grid) {
+        @include grid-column(10);
+      }
+
+      text-align: right;
+      text-transform: uppercase;
+
+      a {
+        color: $white;
+        margin-left: 1rem;
+        text-decoration: none;
+        transition: color $base-duration $base-timing;
+
+        &:active,
+        &:focus,
+        &:hover {
+          color: shade($action-color, 25%);
+        }
+      }
+    }
+  }
+}

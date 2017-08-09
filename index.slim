@@ -5,6 +5,127 @@ html lang="en"
     title
       | This is Jen's Awesome Homepage Template
 
+    meta name="viewport" content="width=device-width, initial-scale=1"
     link href="css/styles.css" rel="stylesheet" type="text/css"
-  body
-    h1 hi
+    script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+
+    javascript:
+      $(document).ready(function(){
+      	(function($) {
+      		$('#header__icon').click(function(e){
+      			e.preventDefault();
+      			$('body').toggleClass('with--sidebar');
+      		});
+
+          $('#site-cache').click(function(e){
+            $('body').removeClass('with--sidebar');
+          });
+
+      	})(jQuery);
+      });
+
+  body.home
+    .site-container
+      .menu-pusher
+        header.header
+          a href="#" class="header__icon" id="header__icon"
+          a href="#" class="header__logo"
+            img src="images/Olympic-logo.png" width="200" height="100"
+
+          nav.menu
+            a href="#" Detailed Search
+            a href="#" Tahoe City
+            a href="#" Truckee
+            a href="#" Incline Village
+            a href="#" Sell Your Home
+            a href="#" About
+            a href="#" Contact
+
+        .site-content
+          .banner-container
+            .banner-container__search.grid
+              .banner-container__search--content.centered
+                h1 Let's find your new home
+                form
+                  input type="text" placeholder="Address, City, Postal Code or Listing ID"
+                  input type="submit" value="Search"
+
+          .slideshow-container.grid
+            .slideshow-container__content.centered
+              h2 Our featured properties
+              #slideshow
+                | images
+
+          .location-container.grid
+            .location-container__hero.centered
+              h2 View properties by location
+              h3 find the perfect home, your idea location
+
+            .location-container__locations
+              - 3.times do
+                .location-container__locations--item
+                  | Location
+
+          .full-container.grid
+            .grid__column--8-of-12.centered
+              h2 Headline about the real estate company
+              h3 Compelling subhead about the real estate company
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+          .about-container.grid
+            .about-container__content
+              .about-container__content--item
+                img src=""
+
+              .about-container__content--item
+                h2 Jennifer Linting
+                p Quick Bio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+          .half-container.grid
+            .grid__column--6-of-12.centered
+              p &raquo; Client quote Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. &laquo;
+              h4 Clint Name
+
+          .full-container.grid
+            .grid__column--4-of-12.centered
+              h2 Call to action to buy or sell homes. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              button
+                | Let's Talk
+
+        footer.grid
+          .license.grid__column--2.grid__column--2-push-1
+            img src="images/Olympic-logo.png" width="200" height="100"
+            p
+              | CA BRE#01440019
+              br
+              | NV #062427
+
+          .contact.grid__column--2
+            h4 Contact
+            p
+              | Email
+              br
+              | Office (530) 545-2187
+              br
+              | Mobile (530) 545-2187
+
+          .grid__column--4
+            h4 Explore
+
+            .explore
+              .explore__item
+                a href="http://example.com" Featured Properies
+                a href="http://example.com" Property Search
+                a href="http://example.com" About
+
+              .explore__item
+                a href="http://example.com" Incline Village
+                a href="http://example.com" Truckee
+                a href="http://example.com" Tahoe City
+
+          .grid__column--2
+            h4 Subscribe to my newsletter
+            .newsletter-form
+              input type="text" placeholder="Enter your email"
+
+        #site-cache.site-cache
